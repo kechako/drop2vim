@@ -81,11 +81,6 @@ func main() {
 			os.Exit(1)
 		}
 
-		if _, err := os.Stat(path); err != nil {
-			fmt.Fprintf(os.Stderr, "The specified file is not found: %s\n", file)
-			os.Exit(1)
-		}
-
 		cmdList = append(cmdList, "drop", path)
 	}
 
